@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  background-color: #eeeeff;
+}
+
 .App {
   text-align: center;
 }
@@ -43,4 +48,31 @@ a {
 
 .user-card {
   text-align: left;
+}
+
+.user-detailed-card-header {
+  text-align: left;
+}
+
+.user-detailed-card {
+  margin-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 100%;
+  text-align: left;
+}
+
+.info-detail {
+  border-bottom: 1px solid lightgrey;
+}
+
+.info-title p {
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.info-detail p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
