@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/user">
+          <Route path="/user/:userId">
             <User />
           </Route>
           <Route path="/">

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar'
 import Container from '@material-ui/core/Container'
@@ -96,7 +97,8 @@ export default class Home extends React.Component {
             >
               {this.state.users.map(user => {
                 return (
-                    <Grid item xs={4} key={user.id}>
+                  <Grid item xs={4} key={user.id}>
+                    <Link to={"/user/" + user.id}>
                       <Card className="user-card">
                         <CardHeader
                           avatar={
@@ -124,7 +126,8 @@ export default class Home extends React.Component {
                           </List>
                         </CardContent>
                       </Card>
-                    </Grid>
+                    </Link>
+                  </Grid>
                 )
               })}
             </Grid>

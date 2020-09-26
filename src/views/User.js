@@ -1,9 +1,12 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 
-export default class User extends React.Component {
+class User extends React.Component {
   render() {
     return (
-      <h1>User</h1>
+      <h1>User {this.props.match.params.userId}</h1>
     )
   }
 }
+
+export default withRouter(User)
