@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
@@ -24,33 +25,47 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <Card className="user-card">
-        <CardHeader
-          avatar={
-            <Avatar aria-label="recipe" className="user-card-avatar">
-              A
-            </Avatar>
-          }
-          title="Some Title"
-          subheader="Some sub header"
-        />
-        <CardContent>
-          <List>
-            <ListItem>
-              <ListItemAvatar>
-                <WorkIcon />
-              </ListItemAvatar>
-              <ListItemText primary="Some title" secondary="Some value" />
-            </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <LocationIcon />
-              </ListItemAvatar>
-              <ListItemText primary="Some title" secondary="Some value" />
-            </ListItem>
-          </List>
-        </CardContent>
-      </Card>
+      <Grid
+        container
+        direction="row"
+        justify="flex-start"
+        alignItems="flex-start"
+        spacing={2}
+      >
+        {this.state.users.map(user => {
+          return (
+            <Grid item xs={4} key={user.id}>
+              <Card className="user-card">
+                <CardHeader
+                  avatar={
+                    <Avatar aria-label="recipe" className="user-card-avatar">
+                      A
+                    </Avatar>
+                  }
+                  title={user.name}
+                  subheader={user.email}
+                />
+                <CardContent>
+                  <List>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <WorkIcon />
+                      </ListItemAvatar>
+                      <ListItemText primary="Company" secondary={user.company.name} />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <LocationIcon />
+                      </ListItemAvatar>
+                      <ListItemText primary="City" secondary={user.address.city} />
+                    </ListItem>
+                  </List>
+                </CardContent>
+              </Card>
+            </Grid>
+          )
+        })}
+      </Grid>
     )
   }
 }
