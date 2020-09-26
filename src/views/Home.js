@@ -82,7 +82,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <AppBar position="static">
-          <Tabs value={this.state.currentTabPosition} onChange={this.handleTabChange} aria-lable="nav tabs">
+          <Tabs value={this.state.currentTabPosition} onChange={this.handleTabChange} aria-label="nav tabs">
             <Tab label="Workers" {...tabProps(0)} />
             <Tab label="Map View" {...tabProps(1)} />
           </Tabs>
