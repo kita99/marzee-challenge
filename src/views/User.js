@@ -10,6 +10,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 
+import LeafletMap from '../components/Map.js'
+
 class User extends React.Component {
   state = {
     user: {
@@ -134,6 +136,10 @@ class User extends React.Component {
               </Grid>
             </CardContent>
           </Card>
+
+          <Grid item xs={12} className="leaflet-card">
+            <LeafletMap users={[this.state.user]} />
+          </Grid>
         </Grid>
       </Container>
     )

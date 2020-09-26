@@ -20,6 +20,8 @@ import Tab from '@material-ui/core/Tab'
 import WorkIcon from '@material-ui/icons/Work'
 import LocationIcon from '@material-ui/icons/LocationOn'
 
+import LeafletMap from '../components/Map.js'
+
 
 TabPanel.propTypes = {
   children: PropTypes.node,
@@ -134,7 +136,7 @@ export default class Home extends React.Component {
           </TabPanel>
 
           <TabPanel value={this.state.currentTabPosition} index={1}>
-            <h1>Map View here</h1>
+            <LeafletMap users={this.state.users} />
           </TabPanel>
         </Container>
       </div>

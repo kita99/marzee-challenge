@@ -50,6 +50,20 @@ a {
   text-align: left;
 }
 
+.user-card:hover {
+  background-color: #53a7ea!important;
+  color: white;
+}
+
+.user-card-avatar {
+  background-color: #8D021F!important
+}
+
+.user-details-back-button {
+  margin-top: 10%!important;
+  width: 100%;
+}
+
 .user-detailed-card-header {
   text-align: left;
 }
@@ -76,3 +90,26 @@ a {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.leaflet-card {
+  padding: 0!important;
+}
+
+.MuiBox-root > .leaflet-container {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 95%;
+}
+
+.MuiGrid-item > .leaflet-container {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  width: 100%;
+  height: 350px;
+}
+
